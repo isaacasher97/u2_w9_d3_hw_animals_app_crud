@@ -23,6 +23,10 @@ app.get("/animals", async (req, res) => {
     res.render('animals/index.ejs', { animals: allAnimals})
 })
 
+app.get("/new", (req, res) => {
+    res.render('animals/new.ejs')
+})
+
 //LISTENER
 app.listen(PORT, () => {
     console.log(`app listening on port ${PORT}`)

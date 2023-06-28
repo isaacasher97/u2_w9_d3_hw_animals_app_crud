@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Animal Kingdom</h1>
+    <main>
+        <div>
+            <% for (animal of animals) { %>
+                <ul>
+                    <li><img src="<%= animal.img %>"></li>
+                    <li>Species: <%= animal.species %></li>
+                    <li>Origin Location: <%= animal.location %></li>
+                    <li>Life Expectancy: <%= animal.species %> Years</li>
+                    <li>extinct: <%= animal.extinct %></li>
+                </ul>
+            <% } %> 
+        </div> 
+    </main>
+</body>
+</html>

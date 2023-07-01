@@ -31,7 +31,7 @@
             <% for (animal of animals) { %>
                 <ul>
                     <li class="animalInfo"><img src="<%= animal.img %>"></li>
-                    <li class="animalInfo"><h2>Species: <%= animal.species %></h2></li>
+                    <li class="animalInfo"><a href="/<%= animal._id %>"><h2>Species: <%= animal.species %></h2></a></li>
                     <li class="animalInfo">Origin Location: <%= animal.location %></li>
                     <li class="animalInfo">Life Expectancy: <%= animal.lifeExpectancy %> Years</li>
                     <li class="animalInfo">extinct: <%= animal.extinct %></li>

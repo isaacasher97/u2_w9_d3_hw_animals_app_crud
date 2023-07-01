@@ -31,3 +31,7 @@ li {
 img {
     margin-left: 15px;
 }
+
+.animalInfo > a {
+    color: black
+}

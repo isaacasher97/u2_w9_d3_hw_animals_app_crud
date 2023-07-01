@@ -28,4 +28,10 @@ router.post('/animals', async (req, res) => {
     
 })
 
+router.get('/:id', async (req, res) => {
+    const id = req.params.id;
+    const animal = await Animal.findById(id);
+    res.render('animals/show.ejs', {animal})
+})
+
 module.exports = router;

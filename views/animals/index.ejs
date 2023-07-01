@@ -3,38 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <%- include('../partials/head.ejs') %>
     <style>
-        body {
-            text-align: center;
-        }
         .container {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
         }
         img {
+            display: flex;
             width: 200px;
             height: 200px;
             border-radius: 50%;
         }
-        li {
+        ul {
+            width: 250px;
+        }
+        .animalInfo {
             display: block;
         }
     </style>
 </head>
 <body>
-    <h1>Animal Kingdom</h1>
-    <a href="/new">Add A New Animal</a>
+    <%- include('../partials/header.ejs') %>
     <main>
         <div class="container">
             <% for (animal of animals) { %>
                 <ul>
-                    <li><img src="<%= animal.img %>"></li>
-                    <li>Species: <%= animal.species %></li>
-                    <li>Origin Location: <%= animal.location %></li>
-                    <li>Life Expectancy: <%= animal.lifeExpectancy %> Years</li>
-                    <li>extinct: <%= animal.extinct %></li>
+                    <li class="animalInfo"><img src="<%= animal.img %>"></li>
+                    <li class="animalInfo"><h2>Species: <%= animal.species %></h2></li>
+                    <li class="animalInfo">Origin Location: <%= animal.location %></li>
+                    <li class="animalInfo">Life Expectancy: <%= animal.lifeExpectancy %> Years</li>
+                    <li class="animalInfo">extinct: <%= animal.extinct %></li>
                 </ul>
             <% } %> 
         </div> 

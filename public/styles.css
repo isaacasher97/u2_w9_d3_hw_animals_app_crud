@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+    background-color: blanchedalmond;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    padding: 10px;
+}
+
+li > a:hover {
+    text-decoration: underline;
+}
+
+li > a {
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 30px;
+}
+li {
+    display: inline;
+    margin: 0 auto;
+}
+
+.backHomeButton > a {
+    color: antiquewhite;
+}
+
+img {
+    margin-left: 15px;
+}

@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <%- include('../partials/head.ejs') %>
+    <style>
+        input {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h1>Add Your New Animal Below</h1>
-    <a href="/animals">Clicke Here To Go Back To Your Animal Kindom</a>
+    <%- include('../partials/header.ejs') %>
+    <h2>Add Your New Animal Below</h2>
+    <button class="backHomeButton"><a href="/animals">Clicke Here To Go Back To Your Animal Kindom</a></button>
     <form action="/animals" method="POST">
         Species name: <input type="text" name="species" placeholder="Insert Species Name" />
         Origin Location: <input type="text" name="location" placeholder="Insert Origin Location" />
@@ -17,4 +23,4 @@
         <input type="submit" value="Create Your Animal"/>
     </form>
 </body>
-</html>
+</html> 

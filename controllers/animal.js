@@ -26,7 +26,7 @@ router.post('/animals', async (req, res) => {
     res.redirect('/animals')
     
 })
-
+ 
 router.get('/:id', async (req, res) => {
     const id = req.params.id;
     const animal = await Animal.findById(id);

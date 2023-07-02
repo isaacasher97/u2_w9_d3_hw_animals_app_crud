@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../partials/head.ejs') %>
+    <style>
+        img {
+            width: 350px;
+            height: 350px;
+        }
+    </style>
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>
+    
+    <main>
+        <div>
+            <form method="POST" action="/<%= animal._id%>?_method=PUT">
+                <fieldset>
+                    <legend> Edit Your <%= animal.species  %></legend>
+                    <label>Species name: <input type="text" name="species" placeholder="Insert Species Name" value="<%= animal.species %>"/></label>
+                    <label>Origin Location: <input type="text" name="location" placeholder="Insert Origin Location" value="<%= animal.location %>" /></label>
+                    <label>Life Expectancy: <input type="number" name="lifeExpectancy" placeholder="Insert Life Expectancy(In Years)" value="<%= animal.lifeExpectancy %>" /></label>
+                    <label>Upload Image URL: <input type="text" name="img" placeholder="Insert Image URL" value="<%= animal.img %>" /></label>
+                    <label>Extinct Species? 
+                        <input 
+                        type="checkbox" 
+                        name="extinct" 
+                        <%= animal.extinct ? "checked" : ""  %>
+                        />
+                    </label>
+                    <br>
+                    <input type="submit" value="Update Your Animal"/>
+                </fieldset>
+            </form>
+
+        </div>
+    </main>
+</body>
+</html> 
